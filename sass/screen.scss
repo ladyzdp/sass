@@ -1,0 +1,53 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+body,
+dl,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre {
+    margin: 0;
+}
+
+button,
+input,
+legend,
+menu,
+option,
+th,
+td,
+textarea {
+    padding: 0;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+input,
+textarea,
+button,
+pre  {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: 100%;
+}
+
+p {
+    font-size: 14px;
+    // line-height:150%;
+    line-height: 1.5;
+}
