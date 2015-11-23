@@ -30,6 +30,14 @@ textarea {
     padding: 0;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0;
+}
+input{
+    border:1px solid #ccc;
+
+}
 ol,
 ul {
     margin: 0;
@@ -41,7 +49,7 @@ body,
 input,
 textarea,
 button,
-pre  {
+pre {
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
     font-size: 100%;
 }
@@ -50,4 +58,75 @@ p {
     font-size: 14px;
     // line-height:150%;
     line-height: 1.5;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+// @import "animate";
+@import "compass";
+$icon-spacing:20px;
+
+@import "icon/*.png";
+@include all-icon-sprites;
+
+[class*="icon-"][class^="icon-"]{
+    display: inline-block;
+    vertical-align: middle;
+    border:1px solid red;
+     width: 60px;
+    height: 600px;
+    background-size:20px 241px;
+}
+
+.icon-home{
+    // width: 160px;
+    // height: 800px;
+   // background-position: 0 -66px;
+    // background-size:50% 50%;
+
+    background-size:30px 30px;
+ 
+}
+
+.icon-money{
+    // width: 160px;
+    // height: 800px;
+    background-size:cover;
+  
+}
+
+.itembox{
+    margin-bottom: 20px;
+    .title{
+        background-color: #999;
+        padding: 5px;
+        margin: 0;
+    }
+    .text{
+        margin: 10px 0;
+        text-indent: 2em;
+    }
+}
+#testbox{
+    width: 800px;
+}
+.comment{
+    padding: 15px 0;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    p{
+        text-indent:2em;
+    }
 }

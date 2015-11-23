@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML标签默认样式</title>
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+
+<body>
+ <span class="icon-home"></span>
+ <span class="icon-money"></span>
+ <span class="icon-arrow"></span>
+ <span class="icon-card"></span>
+    <div class="container">
+        <a href="javascript:;" class="J_fadein">点击触发动画</a>
+        <div class="translate-box "></div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".J_fadein").click(function() {
+            var box = $(".translate-box");
+           
+            if (box.hasClass('fadein')) {
+                box.removeClass('fadein').addClass('fadeout');
+                // location.reload();
+            }else{
+                box.addClass('fadein');
+
+            }
+
+        });
+    });
+    </script>
+</body>
+
+</html>

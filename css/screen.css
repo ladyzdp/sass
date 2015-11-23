@@ -31,6 +31,17 @@ textarea {
 }
 
 /* line 33, ../sass/screen.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0;
+}
+
+/* line 37, ../sass/screen.scss */
+input {
+  border: 1px solid #ccc;
+}
+
+/* line 41, ../sass/screen.scss */
 ol,
 ul {
   margin: 0;
@@ -38,7 +49,7 @@ ul {
   list-style: none;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 body,
 input,
 textarea,
@@ -48,8 +59,129 @@ pre {
   font-size: 100%;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 p {
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* line 63, ../sass/screen.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 68, ../sass/screen.scss */
+img {
+  border: 0;
+}
+
+/* line 72, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 112, icon/*.png */
+.icon-sprite, .icon-all-list, .icon-arrow, .icon-card, .icon-home, .icon-money, .icon-ranklist, .icon-shopping, .icon-shouhou, .icon-user-active {
+  background-image: url('../images/icon-s921d4f8166.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-all-list {
+  background-position: 0 0;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-arrow {
+  background-position: 0 -60px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-card {
+  background-position: 0 -105px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-home {
+  background-position: 0 -165px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-money {
+  background-position: 0 -219px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-ranklist {
+  background-position: 0 -279px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-shopping {
+  background-position: 0 -333px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-shouhou {
+  background-position: 0 -387px;
+}
+
+/* line 84, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-user-active {
+  background-position: 0 -447px;
+}
+
+/* line 82, ../sass/screen.scss */
+[class*="icon-"][class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid red;
+  width: 60px;
+  height: 600px;
+  background-size: 20px 241px;
+}
+
+/* line 91, ../sass/screen.scss */
+.icon-home {
+  background-size: 30px 30px;
+}
+
+/* line 101, ../sass/screen.scss */
+.icon-money {
+  background-size: cover;
+}
+
+/* line 108, ../sass/screen.scss */
+.itembox {
+  margin-bottom: 20px;
+}
+/* line 110, ../sass/screen.scss */
+.itembox .title {
+  background-color: #999;
+  padding: 5px;
+  margin: 0;
+}
+/* line 115, ../sass/screen.scss */
+.itembox .text {
+  margin: 10px 0;
+  text-indent: 2em;
+}
+
+/* line 120, ../sass/screen.scss */
+#testbox {
+  width: 800px;
+}
+
+/* line 123, ../sass/screen.scss */
+.comment {
+  padding: 15px 0;
+  margin: 10px 0;
+  background-color: #f1f1f1;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+/* line 129, ../sass/screen.scss */
+.comment p {
+  text-indent: 2em;
 }
