@@ -34,10 +34,11 @@ input[type="radio"],
 input[type="checkbox"] {
     margin: 0;
 }
-input{
-    border:1px solid #ccc;
 
+input {
+    border: 1px solid #ccc;
 }
+
 ol,
 ul {
     margin: 0;
@@ -72,61 +73,82 @@ img {
 a {
     text-decoration: none;
 }
+
 // @import "animate";
 @import "compass";
 $icon-spacing:20px;
-
 @import "icon/*.png";
 @include all-icon-sprites;
-
-[class*="icon-"][class^="icon-"]{
+[class*="icon-"][class^="icon-"] {
     display: inline-block;
     vertical-align: middle;
-    border:1px solid red;
-     width: 60px;
+    border: 1px solid red;
+    width: 60px;
     height: 600px;
-    background-size:20px 241px;
+    background-size: 20px 241px;
 }
 
-.icon-home{
+.icon-home {
     // width: 160px;
     // height: 800px;
-   // background-position: 0 -66px;
+    // background-position: 0 -66px;
     // background-size:50% 50%;
-
-    background-size:30px 30px;
- 
+    background-size: 30px 30px;
 }
 
-.icon-money{
+.icon-money {
     // width: 160px;
     // height: 800px;
-    background-size:cover;
-  
+    background-size: cover;
 }
 
-.itembox{
+.itembox {
     margin-bottom: 20px;
-    .title{
+    .title {
         background-color: #999;
         padding: 5px;
         margin: 0;
     }
-    .text{
+    .text {
         margin: 10px 0;
         text-indent: 2em;
     }
 }
-#testbox{
+
+#testbox {
     width: 800px;
 }
-.comment{
+
+.comment {
     padding: 15px 0;
     margin: 10px 0;
     background-color: #f1f1f1;
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
-    p{
-        text-indent:2em;
+    p {
+        text-indent: 2em;
     }
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .5;
+    text-align: center;
+    z-index: 5;
+    display: none;
+    span {
+        position: fixed;
+        z-index: 6;
+        color: #fff;
+        top: 50%;
+    }
+}
+.getimg{
+    width: 240px;
+    height: 159px;
 }

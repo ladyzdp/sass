@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ajax-getScript</title>
+  <link rel="stylesheet" type="text/css" href="../../css/screen.css">
+  <script src="../../js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="loading"><span>加载中...</span></div>
+  <fieldset>
+    <legend>热门跟帖</legend>
+    <form action="#" id="form1">
+      <!-- <p>评论：</p>
+      <p>姓名：
+        <input type="text" name="username" id="username">
+      </p>
+      <p>内容：
+        <textarea name="content" id="content" cols="30" rows="5"></textarea>
+      </p> -->
+      <p>
+        <input type="button" id="submit" value="加载评论">
+      </p>
+    </form>
+  </fieldset>
+  <div class="comment">已有评论</div>
+  <br>
+  <div id="restext"></div>
+  <script>
+  $(document).ready(function() {
+    $("#loading").ajaxStart(function() {
+      $(this).show(100);
+    });
+    $("#loading").ajaxStop(function() {
+      $(this).hide(100);
+    });
+    $("#submit").click(function() {
+      $.ajax({
+        type: "GET",
+        url: "test.json",
+        dataType: "json",
+        success: function(data, status) {
+          //清空盒子内容；
+          $("#restext").empty();
+          //创建空对象，用来盛放服务器返回的数据；
+          var html = '';
+          $.each(data, function(index, cont) {
+              //把服务器返回的数据拼接后放入对象html中;
+              html += '<div class="comment"><h6>' + cont.username + '</h6><p>' + cont.content + '</p></div>';
+
+            })
+            //页面上显示服务器返回的信息
+          $("#restext").html(html);
+        },
+        error: function(xhr) {
+          $("#restext").html(xhr.status);
+        }
+      }, 10000);
+
+    });
+  });
+  </script>
+</body>
+
+</html>

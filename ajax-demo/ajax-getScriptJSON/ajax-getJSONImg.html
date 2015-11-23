@@ -2,58 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>ajax-getScript</title>
-    <link rel="stylesheet" type="text/css" href="../../css/screen.css">
-    <script src="../../js/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>ajax-getScript</title>
+  <link rel="stylesheet" type="text/css" href="../../css/screen.css">
+  <script src="../../js/jquery.min.js"></script>
 </head>
 
 <body>
-    <fieldset>
-        <legend>热门跟帖</legend>
-        <form action="#" id="form1">
-            <!--  <p>评论：</p>
+<div id="loading"><span>加载中...</span></div>
+  <fieldset>
+    <legend>加载图片</legend>
+    <form action="#" id="form1">
+      <!--  <p>评论：</p>
            <p>姓名：
                <input type="text" name="username" id="username">
            </p>
            <p>内容：
                <textarea name="content" id="content" cols="30" rows="5"></textarea>
            </p> -->
-            <p>
-                <input type="button" id="submit" value="加载评论">
-            </p>
-        </form>
-    </fieldset>
-    <div class="comment">已有评论</div>
-    <br>
-    <div id="restext"></div>
-    <script>
-    $(document).ready(function() {
-        $("#submit").click(function() {
-            // var GET = $.urlGet();
-            // var id = GET['callback'];
-            // var callback = $.urlGet(['callback']);
-            $.getJSON('http://mall.10085.cn/front/sh/prod!queryMcdsScreenResInterface?uid=p004&callback=?', function(data) {
+      <p>
+        <input type="button" id="submit" value="加载图片">
+      </p>
+    </form>
+  </fieldset>
+  <div class="comment">图片列表</div>
+  <br>
+  <div id="restext"></div>
+  <script>
+  $(document).ready(function() {
 
-                //console.log(typeof(data));
+    $("#submit").click(function() {
+      $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=car&tagmode=any&format=json&jsoncallback=?', function(data) {
 
-                // $("#restext").empty();
-                // var html = '';
+        console.log(typeof(data));
 
-                // $.each(data, function(index, items) {
-                //     $('<img class="img">').attr("src", items.thumbs.thumb_url).appendTo("#restext");
-                //     if (index === 3) {
-                //         return false;
-                //     }
+        $("#restext").empty();
 
-                // });
-
-                console.log(data);
-
-            });
+        $.each(data.items, function(index, item) {
+          $('<img class="getimg">').attr("src", item.media.m).appendTo("#restext");
+          if (index === 4) {
+            return false;
+          }
+          console.log(data);
         });
+
+
+      });
     });
-    </script>
+
+    $.ajaxPrefilter(function(options) {
+      options.global = true;
+    });
+    //共用这2个全局的ajax事件
+    $(document).ajaxStart(function() {
+      $("#loading").show(100);
+    });
+    $(document).ajaxStop(function() {
+      $("#loading").hide(100);
+    });
+
+  });
+  </script>
+  
 </body>
 
 </html>

@@ -36,12 +36,12 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 input {
   border: 1px solid #ccc;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 ol,
 ul {
   margin: 0;
@@ -49,7 +49,7 @@ ul {
   list-style: none;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 body,
 input,
 textarea,
@@ -59,24 +59,24 @@ pre {
   font-size: 100%;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 p {
   font-size: 14px;
   line-height: 1.5;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 img {
   border: 0;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 a {
   text-decoration: none;
 }
@@ -147,33 +147,33 @@ a {
   background-size: 30px 30px;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .icon-money {
   background-size: cover;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .itembox {
   margin-bottom: 20px;
 }
-/* line 110, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .itembox .title {
   background-color: #999;
   padding: 5px;
   margin: 0;
 }
-/* line 115, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .itembox .text {
   margin: 10px 0;
   text-indent: 2em;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 #testbox {
   width: 800px;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .comment {
   padding: 15px 0;
   margin: 10px 0;
@@ -181,7 +181,34 @@ a {
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
 }
-/* line 129, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .comment p {
   text-indent: 2em;
+}
+
+/* line 133, ../sass/screen.scss */
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  text-align: center;
+  z-index: 5;
+  display: none;
+}
+/* line 144, ../sass/screen.scss */
+#loading span {
+  position: fixed;
+  z-index: 6;
+  color: #fff;
+  top: 50%;
+}
+
+/* line 151, ../sass/screen.scss */
+.getimg {
+  width: 240px;
+  height: 159px;
 }

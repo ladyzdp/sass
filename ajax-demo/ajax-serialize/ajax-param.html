@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ajax-param</title>
+  <link rel="stylesheet" type="text/css" href="../../css/screen.css">
+  <script src="../../js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="loading"><span>加载中...</span></div>
+  <fieldset>
+    <legend>热门跟帖</legend>
+    <form action="#" id="form1">
+      <p>
+        <input type="button" value="提交" id="submit">
+      </p>
+    </form>
+  </fieldset>
+  <div class="comment">已有评论</div>
+  <br>
+  <div id="restext"></div>
+  <script>
+  $(document).ready(function() {
+    $("#submit").click(function() {
+      var obj = {
+        "username": "张三",
+        "sex": "男",
+        "content": "沙发."
+      };
+
+      var param = $.param(obj);
+      console.log(param);
+      alert(param);
+    });
+  });
+  </script>
+</body>
+
+</html>
