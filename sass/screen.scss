@@ -152,3 +152,18 @@ $icon-spacing:20px;
     width: 240px;
     height: 159px;
 }
+#messagewindow{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #999;
+}
+input[type='submit'],
+input[type='button']
+{
+   border-radius:5px;
+   background-color: #2873c3;
+   padding:10px 25px;
+   line-height: 100%;
+   color:#fff;
+   border: none;
+}

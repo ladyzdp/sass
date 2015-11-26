@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>基于JQuery的Ajax聊天室程序</title>
+    <link rel="stylesheet" type="text/css" href="../../css/screen.css">
+    <script src="../../js/jquery.min.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>聊天室</legend>
+        <p id="messagewindow"><span id="loading1">加载中...</span></p>
+        <br>
+        <form action="#" method="get" id="chatform">
+            <p>
+                <label for="name">姓名：</label>
+                <input type="text" id="name" value="">
+            </p>
+            <br>
+            <p>
+                <label for="msg">信息：</label>
+                <input type="text" id="msg" name="" value="">
+            </p>
+            <br>
+            <p>
+                <input type="submit" value="发送" id="submit">
+            </p>
+        </form>
+    </fieldset>
+    <script>
+    $(document).ready(function() {
+        $("#chatform").submit(function() {
+            $.post('backend.php', { //向服务器发送数据
+                messages: $("#msg").val(),
+                name: $("#name").val()
+
+            }, function(msg) {
+
+                addMessage(msg);
+            });
+            alert("提交成功！");
+            return false;
+        });
+
+        function addMessage(xml) {
+
+            if ($("status", xml).text() == "2") {
+                return;
+
+            }
+
+            $("message",xml).each(function(index, el) {
+                var author = $("author",this).text();
+                var msg = $("text",this).text();
+                var htmlcode = '<strong>'+author+'</strong>'+msg+'<br/>';
+                $("#messagewindow").append(htmlcode);
+            });
+
+        }
+
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <items>
+    <item>
+      <content value="沙发."/>
+      <username value="张三"/>
+    </item>
+    <item>
+      <content value="板凳."/>
+      <username value="李四"/>
+    </item>
+    <item>
+      <content value="地板."/>
+      <username value="王五"/>
+    </item>
+  </items>
+</root>
