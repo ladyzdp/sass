@@ -13,8 +13,16 @@
         <legend>热门跟帖</legend>
         <form action="#" id="form1">
             <p>评论：</p>
-            <p>姓名：
+            <p><label for="username">姓名：</label>
                 <input type="text" name="username" id="username">
+            </p>
+            <p><label for="sex">性别:</label>
+            <select name="sex" id="sex">
+                <option value="">请选择性别</option>
+                <option value="0">男</option>
+                <option value="1">女</option>
+                
+            </select>
             </p>
             <p>喜欢的运动：</p>
             <p>
@@ -25,7 +33,7 @@
                 <input type="checkbox" id="backetball" name="backetball">
                 <label for="backetball">篮球</label>
             </p>
-            <p>内容：
+            <p><label for="content">内容：</label>
                 <textarea name="content" id="content" cols="30" rows="5"></textarea>
             </p>
             <p>
@@ -39,9 +47,10 @@
     <script>
     $(document).ready(function() {
         $("#submit").click(function() {
-            $.get('get1.php', $("#form1").serialize(), function(data, status) {
+            var data = $("#form1").serialize();
+            $.get('get1.php', data, function(data, status) {
                 //将返回的数据添加到页面上
-                console.log($("#form1").serialize());
+                console.log(data);
                 $("#restext").html(data);
             });
         });

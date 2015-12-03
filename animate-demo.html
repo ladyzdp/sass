@@ -35,6 +35,10 @@
 
         });
     });
+
+    var reg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+    console.log(reg.test("hellow@qq.com"));
+    console.log(reg.exec("yellow"));
     </script>
 </body>
 
